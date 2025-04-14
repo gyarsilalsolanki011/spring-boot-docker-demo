@@ -2,16 +2,16 @@ version: '3.8'
 
 services:
 
-  mymongodb:
+  my-mongodb:
     image: mongo
-    container_name: "mymongodb"
+    container_name: "my-mongodb"
     ports:
       - "27017:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: qwerty
     volumes:
-      - E:\Device File\OneDrive\Desktop\data\springboot-mongo-data:/data/db
+      - E:\Device File\OneDrive\Desktop\data\spring-boot-docker-data:/data/db
 
   mongo-express:
     image: mongo-express
@@ -24,10 +24,10 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://admin:qwerty@mymongodb:27017/
       ME_CONFIG_BASICAUTH: true
 
-  springboot-mongo-demo:
-    image: gyarsilalsolanki011/springboot-mongo-demo:1.0
-    container_name: "springboot-mongo-demo"
+  spring-boot-docker-demo:
+    image: gyarsilalsolanki011/spring-boot-docker-demo:latest
+    container_name: "spring-boot-docker-demo"
     ports:
       - '8080:8080'
     links:
-      - mymongodb
+      - my-mongodb

@@ -14,7 +14,7 @@ FROM openjdk:17
 WORKDIR /app
 
 #Copying Jar file into image
-COPY --from=build /app/target/springboot-mongo-docker.jar /app/app.jar
+COPY --from=build /app/target/spring-boot-docker-demo.jar /app/app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
