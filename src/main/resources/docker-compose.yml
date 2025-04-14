@@ -6,7 +6,7 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - E:\Device File\OneDrive\Desktop\data\my-database:/data/db
+      - E:\Device File\OneDrive\Desktop\data\springboot-mongo-app-data:/data/db
 
   springboot-mongo-demo:
     image: gyarsilalsolanki011/springboot-mongo-demo

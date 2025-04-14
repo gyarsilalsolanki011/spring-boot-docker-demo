@@ -4,3 +4,9 @@ spring:
       host: mymongodb
       database: userCollection
       port: 27017
+      username: admin
+      password: qwerty
+      uri: mongodb://admin:qwerty@mymongodb:27017/
+
+server:
+  port: 8080
